@@ -1,0 +1,27 @@
+@grid-size: 340px;
+@tile-size: 32px;
+
+.user-select(@user-select) {
+  -webkit-touch-callout: @user-select;
+  -webkit-user-select: @user-select;
+  -khtml-user-select: @user-select;
+  -moz-user-select: @user-select;
+  -ms-user-select: @user-select;
+  user-select: @user-select;
+}
+
+.transition(@delay, @type) {
+  -webkit-transition: @delay @type;
+  -moz-transition: @delay @type;
+  -o-transition: @delay @type;
+  transition: @delay @type;
+}
+
+.transform(@transform) {
+  -webkit-transform: @transform;
+  -moz-transform: @transform;
+  -ms-transform: @transform; /* note that you have @trasnform here */
+  -o-transform: @transform;
+  transform: @transform;
+
+}

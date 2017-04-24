@@ -1,0 +1,33 @@
+<div class="message-top">
+    <svg class="captain">
+        <use xlink:href attr.xlink:href="#{{icon}}"/>
+    </svg>
+    <div class="captain-message">
+        <h1>{{captainMessageHeader}}</h1>
+        <p>
+            {{captainMessageLine1}}
+        </p>
+        <p>
+            {{captainMessageLine2}}
+        </p>
+    </div>
+</div>
+
+<div class="start-btn" (click)="resetGame()">
+    <svg>
+        <use xlink:href="#cannon" />
+    </svg>
+    <span>
+        Start a new battle!
+    </span>
+</div>
+
+<div>
+    <grid [grid]="game.playerGrid"></grid>
+    <enemy-grid [grid]="game.enemyGrid" [class.enemy-turn]="!game.isPlayerTurn"></enemy-grid>
+</div>
+<div class="footer">
+    <p>Author: <a href="https://github.com/AndreiChernykh">Andrei Chernykh</a> for Angular Attack 2017.</p>
+    <p>Team: <a href="http://www.angularattack.com/entries/210-maple-syrup">Maple Syrup</a></p>
+    <p><a href="http://www.flaticon.com/authors/freepik">Icon set is designed by Freepik from Flaticon</a></p>
+</div>

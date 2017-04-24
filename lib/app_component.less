@@ -1,0 +1,100 @@
+@import 'web/common.less';
+
+:host {
+    /* This is equivalent of the 'body' selector of a page. */
+}
+
+grid {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+
+enemy-grid {
+  margin-bottom: 30px;
+  cursor: pointer;
+
+  &.enemy-turn {
+    cursor: wait;
+  }
+}
+
+.captain {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.captain-message {
+  h1 {
+    text-transform: capitalize;
+  }
+
+  .user-select(none);
+  display: inline-block;
+
+  padding: 0 18px 0 18px;
+  border: 1px solid #ccc;
+  position: relative;
+  margin-left: 20px;
+  vertical-align: bottom;
+}
+
+.captain-message::after{
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 60%;
+  width: 0;
+  height: 0;
+  border-right: 20px solid #ccc;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  clear: both;
+}
+
+.start-btn {
+  .user-select(none);
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  font-size: 21px;
+
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+
+  svg {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+  }
+
+  span {
+    text-transform: capitalize;
+    padding-left: 76px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }
+
+  .transition(0.2s, ease-in-out);
+  &:hover {
+    .transform(scale(1.1));
+  }
+}
+
+.footer {
+  padding: 12px;
+  p {
+    font-size: 15px;
+  }
+
+  a {
+    font-size: 15px;
+    color: #376FBA;
+    text-decoration: none;
+  }
+}

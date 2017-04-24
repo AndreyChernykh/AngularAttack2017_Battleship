@@ -1,0 +1,5 @@
+<tile *ngFor="let tile of grid.tiles"
+      class="enemy-grid"
+      [tile]="tile"
+      (click)="onTileClick($event, tile)"
+></tile>

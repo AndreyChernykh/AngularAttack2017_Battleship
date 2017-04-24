@@ -1,0 +1,84 @@
+@import 'web/common.less';
+
+:host {
+  width: @tile-size;
+  height: @tile-size;
+  display: inline-block;
+
+  float: left;
+  border: 1px solid #E9E9E9;
+
+  .user-select(none);
+
+  .marker {
+    display: block;
+    height: 12px;
+    width: 12px;
+    border-radius: 18px;
+    margin: 10px;
+  }
+
+  &.miss {
+    .marker {
+      background-color: #636363;
+    }
+  }
+
+  &:not(.enemy-grid) {
+    &.occupied {
+      border: 1px solid black;
+    }
+
+    &.revealed {
+      .marker {
+        background-color: #636363;
+      }
+    }
+
+    &.hit {
+      .marker {
+        background-color: #ff724d;
+      }
+    }
+  }
+
+  &.enemy-grid {
+    &.revealed {
+      .marker {
+        background-color: #636363;
+      }
+
+      &.occupied {
+        border: 1px solid black;
+      }
+    }
+
+    &.hit {
+      .marker {
+        background-color: #ff724d;
+      }
+    }
+
+    &:hover {
+      background-color: #e4e4e4;
+    }
+
+    &:active {
+      background-color: #fff;
+    }
+  }
+
+  .message {
+    width: @tile-size;
+    height: @tile-size;
+
+
+    opacity: 1;
+
+    &.fade {
+      .transform(translate(0, -50px));
+      .transform(translate(0, -50px));
+      opacity: 0;
+    }
+  }
+}
