@@ -5,12 +5,12 @@
 If Ye salty dog, ye join me it a great battle, mate!
 Thee rulez are simple: fire cannons and sink enemy's ships!
 
-If ye want more to read moar: https://en.wikipedia.org/wiki/Battleship_(game)
+If ye want more to read MOAR: https://en.wikipedia.org/wiki/Battleship_(game)
 
 # Development
 ```
 pub upgrade
-bup serve web
+pub serve web
 ```
 
 #Build
